@@ -4,7 +4,7 @@ import { ThemedText } from "@/components/ThemedText";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { ThemedView } from "@/components/ThemedView";
 
-const Profil = () => {
+const Paiement = () => {
   return <View style={styles.container}></View>;
 };
 
@@ -21,4 +21,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Profil;
+export default Paiement;

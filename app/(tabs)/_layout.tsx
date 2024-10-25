@@ -5,7 +5,7 @@ import { TabBarIcon } from "@/components/navigation/TabBarIcon";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { Colors } from "@/constants/Colors";
 import { useColorScheme } from "@/hooks/useColorScheme";
-// import ProfileScreen from './ProfileScreen';
+
 export default function TabLayout() {
   const colorScheme = useColorScheme();
 
@@ -13,7 +13,6 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
-        // headerShown: false,
       }}
     >
       <Tabs.Screen
@@ -33,10 +32,7 @@ export default function TabLayout() {
         options={{
           title: "Taxis",
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon
-              name={focused ? "code-slash" : "code-slash-outline"}
-              color={color}
-            />
+            <TabBarIcon name={focused ? "car" : "car-outline"} color={color} />
           ),
         }}
       />
@@ -46,20 +42,19 @@ export default function TabLayout() {
           title: "Mon compte",
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
-              name={focused ? "code-slash" : "code-slash-outline"}
+              name={focused ? "person" : "person-outline"}
               color={color}
             />
           ),
         }}
       />
-
       <Tabs.Screen
-        name="Profil"
+        name="Paiement"
         options={{
-          title: "profil",
+          title: "Paiement",
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
-              name={focused ? "person" : "person-outline"} // Remplace par des icônes de profil valides
+              name={focused ? "card" : "card-outline"}
               color={color}
             />
           ),
